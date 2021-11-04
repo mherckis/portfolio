@@ -73,21 +73,25 @@ nav {
     padding: 20px;
     font-size: 20px;
     font-family: Cabin, sans-serif;
-    color: #ffffff;
+    color: #ad0057;
 }
 
 .nav_links{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    background-color:#ad0057;
-    color: #ffffff;
+    background-color: #ffffff;
+    color: #ad0057;
 	padding: 8px 9px 8px 9px;
 	display: inline;
     width: 90%;
     border-radius: 15px;
     line-height: 1.2;
     
+}
+
+.nav_item {
+    color: #ad0057;
 }
 
 .nav_links a:hover{
@@ -97,13 +101,13 @@ nav {
 
 .nav_links .selected{
     font-weight: bolder;
-    background-color: #000000;
+    background-color: lightpink;
     text-transform: uppercase;
 
 }
 
 :visited{
-    color: #ffffff;
+    color: #ad0057;
 }
 
 header { 
@@ -144,13 +148,13 @@ img{
 .grid_pics {
     display: grid;
     width: 90%;
-    padding: 15px;
-    grid-template-columns: auto auto auto auto auto auto;
-    gap: 15px;
+    gap: 10px;
     font-family: Cabin, sans-serif;
     margin-left: auto;
-    margin-left: auto;
-    height: auto;
+    margin-right: auto;
+    grid-template-rows: auto auto auto auto auto auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 
@@ -160,8 +164,8 @@ img{
     background-size: cover;
     border-radius: 15px;
     border: solid 2px #ad0057;
-    height: 400px;
-    width: 400px;
+    height: 300px;
+    width: 300px;
     display: block;
     margin: auto;
 
@@ -173,8 +177,8 @@ img{
     background-size: cover;
     border-radius: 15px;
     border: solid 2px #ad0057;
-    height: 400px;
-    width: 400px;
+    height: 300px;
+    width: 300px;
     display: block;
     margin: auto;
 }
@@ -185,8 +189,8 @@ img{
     background-size: cover;
     border-radius: 15px;
     border: solid 2px #ad0057;
-    height: 400px;
-    width: 400px;
+    height: 300px;
+    width: 300px;
     display: block;
     margin: auto;
 }
@@ -197,8 +201,8 @@ img{
     background-size: cover;
     border-radius: 15px;
     border: solid 2px #ad0057;
-    height: 400px;
-    width: 400px;
+    height: 300px;
+    width: 300px;
     display: block;
     margin: auto;
 }
@@ -209,8 +213,8 @@ img{
     background-size: cover;
     border-radius: 15px;
     border: solid 2px #ad0057;
-    height: 400px;
-    width: 400px;
+    height: 300px;
+    width: 300px;
     display: block;
     margin: auto;
 }
@@ -221,8 +225,8 @@ img{
     background-size: cover;
     border-radius: 15px;
     border: solid 2px #ad0057;
-    height: 400px;
-    width: 400px;
+    height: 300px;
+    width: 300px;
     display: block;
     margin: auto;
 }
@@ -257,11 +261,6 @@ img{
     margin-right: auto;
 }
 
-.food1 {
-    background: url(../images/bagel.jpg);
-    background-size: cover;
-    grid-row: 1;
-}
 
 .food1 p, .food2 p, .food3 p, .food4 p, .food5 p, .food6 p, .food7 p, .food8 p, .food9 p {
     opacity: 0;
@@ -275,6 +274,12 @@ img{
     border-radius: 10px;
     height: 93%;
     align-items: center;
+}
+
+.food1 {
+    background: url(../images/bagel.jpg);
+    background-size: cover;
+    grid-row: 1;
 }
 
 .food2 {
