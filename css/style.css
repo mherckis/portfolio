@@ -141,13 +141,24 @@ body{
 
 footer {
     background-color: #ad0057;
-    color: white;
-    font-weight: bold;
-    font-family: Cabin, sans-serif;
 }
 
 footer p{
     color: #ffffff;
+    font-weight: bold;
+    font-family: Cabin, sans-serif;
+}
+
+footer a:link{
+    color: #ffffff;
+    font-weight: bold;
+    font-family: Cabin, sans-serif;
+}
+
+footer a:visited{
+    color: #ffffff;
+    font-weight: bold;
+    font-family: Cabin, sans-serif;
 }
 
 img{
