@@ -49,9 +49,10 @@ h1 {
     font-size: 40px;
     color: #3F250B;
     font-family: Cabin, sans-serif;
+}
 
-h3{
-    text-align: center;
+h3 {
+    align-items: center;
 }
 
 p{
