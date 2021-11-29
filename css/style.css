@@ -13,8 +13,6 @@ html{
     grid-template-columns: auto auto auto auto;
     justify-items: center;
 }
-
-
 .education, .hometown, .interests, .hobbies { 
     grid-column: 1/4;
     font-family: Cabin, sans-serif;
@@ -31,10 +29,9 @@ h1 {
     text-align: center;
     justify-content: center;
     align-items: center;
-    font-size: 40px;
+    font-size: 50px;
     color: #3F250B;
     font-family: Cabin, sans-serif;
-
 }
 
 h2 {
@@ -46,6 +43,7 @@ h2 {
     justify-content: center;
     padding: 15px;
     color: #3F250B;
+    padding-top: 45px;
 }
 
 h3 {
@@ -86,7 +84,6 @@ nav {
     width: 90%;
     border-radius: 15px;
     line-height: 1.2;
-    
 }
 
 .nav_item {
@@ -102,7 +99,7 @@ nav {
     font-weight: bolder;
     background-color: #ffe9ec;
     text-transform: uppercase;
-
+    font-size: 25px;
 }
 
 :visited{
@@ -130,7 +127,7 @@ header {
     background-color: #ffb6c1;
     font-family: Cabin, sans-serif;
     color: #3F250B;
-    height: 215px;
+    height: 250px;
     width: 100%;
     padding-bottom: 10px;
 }
@@ -138,8 +135,6 @@ header {
 body{
     background-color: #ffe9ec;
 }
-
-
 
 footer {
     background-color: #ad0057;
@@ -172,7 +167,16 @@ img{
     border-radius: 15px;
     padding: 14px;
     border: 2px solid #ad0057;
+    animation-name: img;
+    animation-duration: 1s;
+    animation-direction: alternate;
+      animation-iteration-count:infinite;
 }
+
+@keyframes img {
+    from { transform: translate3d(0, 0, 0);}
+    to { transform: translate3d(0, 15px, 0);}
+  }
 
 .grid_pics {
     display: grid;
@@ -185,28 +189,21 @@ img{
     padding-top: 20px;
     padding-bottom: 20px;
 }
-
-
 .box1 {
     background: url(../images/dog.jpg);
 }
-
 .box2 {
     background: url(../images/my_family.jpg);
 }
-
 .box3 {
     background: url(../images/friends.jpg);
 }
-
 .box4 {
     background: url(../images/chicago.jpg);
 }
-
 .box5 {
     background: url(../images/bighouse.jpg); 
 }
-
 .box6 {
     background: url(../images/beach.jpg);
 }
@@ -227,11 +224,10 @@ img{
     color: #ffffff;
     background-color: #ad0057;
     border-radius: 15px;
-
 }
 
 .grid_of_food{
-    display: grid;
+    display:grid;
     width: 90%;
     gap: 10px;
     font-family: Cabin, sans-serif;
@@ -251,7 +247,6 @@ img{
     margin-left: auto;
     margin-right: auto;
 }
-  
 
 .food1 p, .food2 p, .food3 p, .food4 p, .food5 p, .food6 p, .food7 p, .food8 p, .food9 p {
     opacity: 0;
@@ -277,7 +272,6 @@ img{
     background: url(../images/charcuterie.jpg);
     background-size: cover;
     grid-row: 2;
-
 }
 
 .food3 {
@@ -290,14 +284,12 @@ img{
     background: url(../images/donuts.jpg);
     background-size: cover;
     grid-row: 4;
-
 }
 
 .food5 {
     background: url(../images/lobster_roll.jpg);
     background-size: cover;
     grid-row: 5;
-
 }
 
 .food6 {
@@ -324,6 +316,65 @@ img{
     grid-row: 9;
 }
 
+.flip-card {
+    background-color: transparent;
+	width: 300px;
+	height: 100px;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+	position: absolute;
+	width: 100%;
+    height: 100%;
+	-webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+	background-color: #ad0057;
+    border: solid 10px white;
+    border-radius: 15px;
+    align-items: center;
+    color: white;
+    font-family: "Cabin", 'serif';
+    font-size: 30px;
+    text-align: center;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    background-color:white;
+    border: solid 10px #ad0057;
+	border-radius: 15px;
+	color: #ad0057;
+    transform: rotateY(180deg);
+    font-family: "Cabin", 'serif';
+    font-size: 30px;
+  }
+
 input[type=text], select, textarea {
 	width: auto; 
 	padding: 12px;
@@ -337,10 +388,9 @@ input[type=text], select, textarea {
 	resize: vertical horizontal;
 	align-items: center;
 	display: block;
-
 }
 
-/* Style the submit button */
+/* making the submit button look pretty */
 input[type=submit] {
     background-color: white;
 	color: #ad0057;
@@ -351,7 +401,7 @@ input[type=submit] {
     font-family: "Cabin", 'serif';
 }
 
-/* moving the mouse over the submit button */
+/* hovering over the submit button */
 input[type=submit]:hover {
 	background-color: #ad0057;
     color: white;
@@ -360,7 +410,6 @@ input[type=submit]:hover {
 }
 
 .container_contact{
-
 	border-radius: 5px;
 	background-color: #ffe9ec;
 	padding: 20px;
@@ -372,7 +421,15 @@ input[type=submit]:hover {
 	justify-content: center;
     align-self: center;
     font-family: Cabin, sans-serif;
+}
 
+.parallax{
+    background-image: url(../images/contact.jpg);
+    background-attachment: fixed; /* Parallax effect */
+    background-position: center; /* Parallax effect */
+    background-size: cover; /* Parallax effect */
+    height: 200px; /* Parallax effect */ 
+    width: auto;
 }
 
 /*tablet view*/
@@ -483,11 +540,9 @@ input[type=submit]:hover {
         height: 250px;
         width: 250px;
     }
-
-
 }
-
-@media screen and (min-width: 992px){
+/*Laptop View*/
+@media screen and (min-width: 950px){
     .grid_pics{
         display: grid;
         grid-column: auto auto auto auto;
@@ -534,5 +589,29 @@ input[type=submit]:hover {
     footer{
         width: 100%;
     }
+    .item {
+        height: 300px;
+        width: 300px;
+    }  
 }
-
+/*reduced motion*/
+@media screen and (prefers-reduced-motion: reduce){
+    img{
+      animation: none;
+    } 
+/* Turn Parallax effect off */
+    .parallax{
+        background-attachment: scroll; 
+    }
+/* Turn Flip card off */
+    .flip-card:hover .flip-card-inner{
+        transition: transform none;
+        transform: none;
+    }
+/* Turn hoverig descriptions off */
+    .food1 p:hover, .food2 p:hover, .food3 p:hover, .food4 p:hover, .food5 p:hover, .food6 p:hover, .food7 p:hover, .food8 p:hover, .food9 p:hover{
+        background: transparent;
+        font-size: 0px;
+        opacity: 0;
+    }
+}
