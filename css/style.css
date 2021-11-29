@@ -355,7 +355,7 @@ img{
   /* Style the front side (fallback if image is missing) */
   .flip-card-front {
 	background-color: #ad0057;
-    border: solid 10px white;
+    border: solid 5px white;
     border-radius: 15px;
     align-items: center;
     color: white;
@@ -367,7 +367,7 @@ img{
   /* Style the back side */
   .flip-card-back {
     background-color:white;
-    border: solid 10px #ad0057;
+    border: solid 5px #ad0057;
 	border-radius: 15px;
 	color: #ad0057;
     transform: rotateY(180deg);
