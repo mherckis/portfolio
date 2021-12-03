@@ -10,11 +10,10 @@ html{
     font-family: Cabin, sans-serif;
     margin-left: auto;
     margin-right: auto;
-    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto auto auto;
     justify-items: center;
 }
 .education, .hometown, .interests, .hobbies { 
-    grid-column: 1/4;
     font-family: Cabin, sans-serif;
     color: #3F250B;
     border: 2px solid #3F250B;
@@ -24,7 +23,6 @@ html{
 
 h1 {
     text-align: center;
-    display: flex;
     margin: 10px;
     text-align: center;
     justify-content: center;
@@ -51,7 +49,6 @@ h3 {
 }
 
 p{
-    display: flex;
     text-align: center;
     justify-content: center;
     font-family: Cabin, sans-serif;
@@ -326,7 +323,7 @@ img{
     padding-top: 20px;
     padding-bottom: 30px;
   }
-  /* This container is needed to position the front and back side */
+
   .flip-card-inner {
 	position: relative;
 	width: 100%;
@@ -338,7 +335,6 @@ img{
 	transform-style: preserve-3d;
   }
   
-  /* Do an horizontal flip when you move the mouse over the flip box container */
   .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
   }
@@ -348,11 +344,10 @@ img{
 	position: absolute;
 	width: 100%;
     height: 100%;
-	-webkit-backface-visibility: hidden; /* Safari */
+	-webkit-backface-visibility: hidden; 
     backface-visibility: hidden;
   }
   
-  /* Style the front side (fallback if image is missing) */
   .flip-card-front {
 	background-color: #ad0057;
     border: solid 5px white;
@@ -377,17 +372,21 @@ img{
 
 input[type=text], select, textarea {
 	width: auto; 
-	padding: 12px;
+	padding: 40px;
 	border: 1px solid #ccc;
 	border-radius: 4px; 
 	box-sizing: 20px; 
-	margin-top: 6px; 
+	margin-top: 10px; 
 	margin-bottom: 16px;
 	margin-left: auto;
 	margin-right: auto;
-	resize: vertical horizontal;
+    resize: vertical horizontal;
 	align-items: center;
-	display: block;
+    display: block;
+    width: 300px;
+}
+#country{
+    padding: 15px;
 }
 
 /* making the submit button look pretty */
@@ -415,8 +414,8 @@ input[type=submit]:hover {
 	padding: 20px;
 	background-size: cover;       
 	color: #ad0057;
-	height: 620px;                
-	margin-bottom: 25px;   
+    height: 620px;             
+	margin-bottom: 10px;   
 	text-align: center;
 	justify-content: center;
     align-self: center;
@@ -425,10 +424,10 @@ input[type=submit]:hover {
 
 .parallax{
     background-image: url(../images/contact.jpg);
-    background-attachment: fixed; /* Parallax effect */
-    background-position: center; /* Parallax effect */
-    background-size: cover; /* Parallax effect */
-    height: 200px; /* Parallax effect */ 
+    background-attachment: fixed;
+    background-position: center; 
+    background-size: cover; 
+    height: 400px;  
     width: auto;
 }
 
@@ -442,6 +441,9 @@ input[type=submit]:hover {
         grid-row-gap: 10px;
         height: 100%;
         width: 95%;
+    }
+    #hello{
+        text-align:right;
     }
     .box1 {
         grid-row: 1;
@@ -469,8 +471,8 @@ input[type=submit]:hover {
     }
 
     .pic{
-        height: 250px;
-        width: 250px;
+        height: 215px;
+        width: 215px;
     }
 
     .nav_links{
@@ -528,17 +530,21 @@ input[type=submit]:hover {
         grid-row: 3;
         grid-column: 3;
     }
-    header{
-        width: 100%;
-    }
-
     footer{
         width: 100%;
     }
-
     .item {
-        height: 250px;
-        width: 250px;
+        height: 225px;
+        width: 225px;
+    }
+    header{
+        height: 175px;
+        width: 100%;
+    }
+    .grid{
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
     }
 }
 /*Laptop View*/
@@ -608,7 +614,7 @@ input[type=submit]:hover {
         transition: transform none;
         transform: none;
     }
-/* Turn hoverig descriptions off */
+/* Turn hovering descriptions off */
     .food1 p:hover, .food2 p:hover, .food3 p:hover, .food4 p:hover, .food5 p:hover, .food6 p:hover, .food7 p:hover, .food8 p:hover, .food9 p:hover{
         background: transparent;
         font-size: 0px;
