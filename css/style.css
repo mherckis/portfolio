@@ -24,7 +24,6 @@ html{
 h1 {
     text-align: center;
     margin: 10px;
-    text-align: center;
     justify-content: center;
     align-items: center;
     font-size: 50px;
@@ -98,7 +97,6 @@ nav {
     text-transform: uppercase;
     font-size: 25px;
 }
-
 :visited{
     color: #ad0057;
 }
@@ -243,6 +241,7 @@ img{
     display: block;
     margin-left: auto;
     margin-right: auto;
+    grid-column: 1/9;
 }
 
 .food1 p, .food2 p, .food3 p, .food4 p, .food5 p, .food6 p, .food7 p, .food8 p, .food9 p {
@@ -262,55 +261,38 @@ img{
 .food1 {
     background: url(../images/bagel.jpg);
     background-size: cover;
-    grid-row: 1;
 }
-
 .food2 {
     background: url(../images/charcuterie.jpg);
     background-size: cover;
-    grid-row: 2;
 }
-
 .food3 {
     background: url(../images/crispy_rice.jpg);
     background-size: cover;
-    grid-row: 3;
 }
-
 .food4 {
     background: url(../images/donuts.jpg);
     background-size: cover;
-    grid-row: 4;
 }
-
 .food5 {
     background: url(../images/lobster_roll.jpg);
     background-size: cover;
-    grid-row: 5;
 }
-
 .food6 {
     background: url(../images/paella.jpg);
     background-size: cover;
-    grid-row: 6;
 }
-
 .food7 {
     background: url(../images/pasta.jpg);
     background-size: cover;
-    grid-row: 7;
 }
-
 .food8 {
     background: url(../images/pizza.jpg);
     background-size: cover;
-    grid-row: 8;
 }
-
 .food9 {
     background: url(../images/sushi.jpg);
     background-size: cover;
-    grid-row: 9;
 }
 
 .flip-card {
@@ -339,7 +321,6 @@ img{
     transform: rotateY(180deg);
   }
   
-  /* Position the front and back side */
   .flip-card-front, .flip-card-back {
 	position: absolute;
 	width: 100%;
@@ -372,7 +353,7 @@ img{
 
 input[type=text], select, textarea {
 	width: auto; 
-	padding: 40px;
+    padding: 40px;
 	border: 1px solid #ccc;
 	border-radius: 4px; 
 	box-sizing: 20px; 
@@ -383,7 +364,7 @@ input[type=text], select, textarea {
     resize: vertical horizontal;
 	align-items: center;
     display: block;
-    width: 300px;
+    width: 100px;
 }
 #country{
     padding: 15px;
@@ -411,7 +392,7 @@ input[type=submit]:hover {
 .container_contact{
 	border-radius: 5px;
 	background-color: #ffe9ec;
-	padding: 20px;
+	padding: 10px;
 	background-size: cover;       
 	color: #ad0057;
     height: 620px;             
@@ -421,7 +402,6 @@ input[type=submit]:hover {
     align-self: center;
     font-family: Cabin, sans-serif;
 }
-
 .parallax{
     background-image: url(../images/contact.jpg);
     background-attachment: fixed;
@@ -442,8 +422,12 @@ input[type=submit]:hover {
         height: 100%;
         width: 95%;
     }
-    #hello{
-        text-align:right;
+    img{
+        float:left;
+        margin-left: 20px;
+    }
+    #aboutme{
+        text-align: right;
     }
     .box1 {
         grid-row: 1;
@@ -546,6 +530,10 @@ input[type=submit]:hover {
         grid-template-columns: auto auto;
         grid-template-rows: auto auto;
     }
+    input[type=text], select, textarea {
+        width: 300px;
+        padding: 50px;
+    }
 }
 /*Laptop View*/
 @media screen and (min-width: 950px){
@@ -558,9 +546,7 @@ input[type=submit]:hover {
         height: 100%;
         width: 95%;
     }
-
     .pic{
-        grid-row: 1/6; 
         width: 200px;
         height: 200px;
     }
@@ -591,7 +577,6 @@ input[type=submit]:hover {
     header{
         width: 100%;
     }
-
     footer{
         width: 100%;
     }
