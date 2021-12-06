@@ -581,8 +581,8 @@ input[type=submit]:hover {
         width: 100%;
     }
     .item {
-        height: 300px;
-        width: 300px;
+        height: 290px;
+        width: 290px;
     }  
 }
 /*reduced motion*/
